@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://8x4fgujil24f"]
+
+[ext_resource type="Script" path="res://src/scripts/player.gd" id="1_qkrhy"]
+[ext_resource type="Texture2D" uid="uid://cm1pdx4uqsbyk" path="res://assets/images/birb.jpeg" id="1_v1hh6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4882j"]
+size = Vector2(75, 76.5)
+
+[node name="RigidDynamicBody2D" type="RigidDynamicBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_qkrhy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0569231, 0.0569231)
+texture = ExtResource("1_v1hh6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0.25)
+shape = SubResource("RectangleShape2D_4882j")
