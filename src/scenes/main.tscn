@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://evhb58c82hgi"]
+[gd_scene load_steps=3 format=3 uid="uid://evhb58c82hgi"]
 
 [ext_resource type="PackedScene" uid="uid://8x4fgujil24f" path="res://src/scenes/player.tscn" id="1_1roxw"]
+[ext_resource type="PackedScene" uid="uid://2k6eekm713vc" path="res://src/scenes/stage.tscn" id="1_v7qlh"]
 
 [node name="Main" type="Node2D"]
+
+[node name="stage" parent="." instance=ExtResource("1_v7qlh")]
 
 [node name="RigidDynamicBody2D" parent="." instance=ExtResource("1_1roxw")]
 position = Vector2(136, 350)
